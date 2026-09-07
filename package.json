@@ -1,0 +1,15 @@
+{
+  "name": "ridesawa",
+  "version": "1.0.0",
+  "description": "Transport bus and cab booking platform",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "install:all": "npm install --workspaces"
+  }
+}
