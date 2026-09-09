@@ -22,7 +22,7 @@ const vehicleSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    amenities: [String], // e.g. ['wifi', 'ac', 'usb-charging']
+    amenities: [String], 
     isActive: {
       type: Boolean,
       default: true,

@@ -40,7 +40,6 @@ const bookingSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-// Auto-generate a booking reference before saving
 bookingSchema.pre('save', function (next) {
   if (!this.bookingReference) {
     this.bookingReference = 'RW-' + Date.now().toString(36).toUpperCase()
