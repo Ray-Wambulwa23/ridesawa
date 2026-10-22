@@ -9,7 +9,7 @@ import { protect } from '../middleware/auth.middleware.js'
 
 const router = express.Router()
 
-router.use(protect) // All booking routes require authentication
+router.use(protect)
 
 router.post('/', createBooking)
 router.get('/my', getUserBookings)

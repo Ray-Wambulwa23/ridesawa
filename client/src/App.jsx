@@ -1,11 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
+import Home from './pages/Home'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
-        {/* Routes will be added here as we build each feature */}
-        <Route path="/" element={<div>Welcome to Ridesawa</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   )

@@ -13,7 +13,6 @@ const router = express.Router()
 router.get('/search', searchRoutes)
 router.get('/:id', getRouteById)
 
-// Admin only
 router.post('/', protect, adminOnly, createRoute)
 router.put('/:id', protect, adminOnly, updateRoute)
 router.delete('/:id', protect, adminOnly, deleteRoute)

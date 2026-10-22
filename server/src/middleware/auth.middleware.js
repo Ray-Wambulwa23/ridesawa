@@ -25,7 +25,6 @@ export const protect = async (req, res, next) => {
   }
 }
 
-// Admin only - must be used after protect
 export const adminOnly = (req, res, next) => {
   if (req.user && req.user.role === 'admin') {
     return next()
