@@ -6,7 +6,7 @@ const SearchResults = () => {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
 
-  // Read values from the URL query string
+
   const from = searchParams.get('from')
   const to = searchParams.get('to')
   const date = searchParams.get('date')
@@ -16,7 +16,7 @@ const SearchResults = () => {
   const [error, setError] = useState('')
   const [sortBy, setSortBy] = useState('departureTime')
 
-  // Fetch routes when the page loads
+  
   useEffect(() => {                                                                                                                                                 
     const fetchRoutes = async () => {
       try {
@@ -39,7 +39,6 @@ const SearchResults = () => {
     return new Date(a.departureTime) - new Date(b.departureTime)
   })
 
-  // Format time from a date string e.g. "07:00 AM"
   const formatTime = (dateStr) => {
     return new Date(dateStr).toLocaleTimeString('en-US', {
       hour: '2-digit',
@@ -47,7 +46,6 @@ const SearchResults = () => {
     })
   }
 
-  // Calculate duration between departure and arrival
   const getDuration = (departure, arrival) => {
     const diff = new Date(arrival) - new Date(departure)
     const hours = Math.floor(diff / (1000 * 60 * 60))
@@ -58,7 +56,6 @@ const SearchResults = () => {
   return (
     <div className="min-h-screen bg-gray-50">
 
-      {/* ── Search Summary Bar ── */}
       <div
         className="py-6 px-6"
         style={{
